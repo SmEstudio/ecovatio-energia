@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadoras de Energía Solar y Consumo Eléctrico - EcoVatio</title>
+  <meta name="description" content="Calculadoras gratuitas de autoconsumo solar, amortización fotovoltaica y coste energético de electrodomésticos en tu factura de luz.">
+  <link rel="canonical" href="https://ecovatio-energia.com/herramientas/">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="../index.html" class="logo">
+        <div class="logo-icon">☀️</div>
+        Eco<span>Vatio</span>
+      </a>
+      <button class="menu-toggle" aria-label="Abrir menú">☰</button>
+      <nav class="main-nav">
+        <ul class="nav-links">
+          <li><a href="../index.html">Inicio</a></li>
+          <li><a href="index.html" class="active">Calculadoras</a></li>
+          <li><a href="../articulos/guia-paneles-solares-autoconsumo-hogar.html">Solar</a></li>
+          <li><a href="../articulos/aerotermia-vs-gas-calderas-comparativa.html">Aerotermia</a></li>
+          <li><a href="../articulos/como-entender-factura-de-la-luz-potencia-kwh.html">Factura</a></li>
+          <li><a href="../sobre-nosotros.html">Nosotros</a></li>
+          <li><a href="../contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="ad-slot-wrapper">
+      <span class="ad-label">Publicidad</span>
+      <div class="ad-box header-banner" data-ad-slot="header"></div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="breadcrumbs" style="margin-top: 15px;">
+      <a href="../index.html">Inicio</a> &gt; <span>Calculadoras Energéticas</span>
+    </div>
+  </div>
+
+  <main class="container">
+    <div class="main-layout single-column">
+      
+      <div style="text-align: center; margin-bottom: 35px;">
+        <span class="badge">Simuladores Energéticos</span>
+        <h1 style="font-size: 2.3rem; color: #064e3b; margin-top: 10px;">Calculadoras de Eficiencia Energética y Autoconsumo</h1>
+        <p style="color: #64748b;">Herramientas gratuitas para tomar decisiones informadas sobre tu inversión en energía limpia.</p>
+      </div>
+
+      <!-- Herramienta 1: Paneles Solares -->
+      <section id="herramienta-solar" class="calculator-box">
+        <span class="badge">Energía Solar Fotovoltaica</span>
+        <h2 class="calculator-title">1. Calculadora de Autoconsumo Fotovoltaico y Retorno de Inversión</h2>
+        <p style="color: #64748b; margin-bottom: 18px;">
+          Descubre cuántos paneles necesita tu vivienda, los kilovatios pico (kWp) recomendados y los años que tardarás en recuperar la inversión con los ahorros en tu factura eléctrica.
+        </p>
+
+        <form id="solar-calc-form" onsubmit="event.preventDefault();">
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
+            <div class="form-group">
+              <label for="solar-monthly-bill" style="font-weight: 600; display: block; margin-bottom: 6px; font-size: 0.9rem;">Gasto Mensual Actual en Luz (€):</label>
+              <input type="number" id="solar-monthly-bill" class="input-control" value="120" min="20" max="1500" step="5">
+            </div>
+
+            <div class="form-group">
+              <label for="solar-sun-hours" style="font-weight: 600; display: block; margin-bottom: 6px; font-size: 0.9rem;">Zona Solar (HSP):</label>
+              <select id="solar-sun-hours" class="input-control">
+                <option value="3.8">Zona Norte / Clima Templado (3.8 HSP)</option>
+                <option value="4.6" selected>Zona Centro / Clima Continental (4.6 HSP)</option>
+                <option value="5.4">Zona Sur / Alta Radiación (5.4 HSP)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="solar-panel-wattage" style="font-weight: 600; display: block; margin-bottom: 6px; font-size: 0.9rem;">Potencia del Panel (Wp):</label>
+              <select id="solar-panel-wattage" class="input-control">
+                <option value="400">400 Wp Monocristalino</option>
+                <option value="450" selected>450 Wp N-Type TopCon</option>
+                <option value="500">500 Wp Alto Rendimiento</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="results-panel">
+            <div class="result-item">
+              <span style="font-weight: 600;">Módulos Fotovoltaicos Sugeridos:</span>
+              <span id="res-solar-panels" class="result-value">8 módulos</span>
+            </div>
+            <div class="result-item">
+              <span style="font-weight: 600;">Potencia Pico Total:</span>
+              <span id="res-solar-kwp" class="result-value" style="color: #064e3b;">3.60 kWp instalados</span>
+            </div>
+            <div class="result-item">
+              <span style="font-weight: 600;">Ahorro Anual Estimado:</span>
+              <span id="res-solar-savings" class="result-value" style="color: #059669;">936 € / año</span>
+            </div>
+            <div class="result-item" style="border-top: 2px solid #059669; padding-top: 10px;">
+              <span style="font-weight: 600; font-size: 1.05rem;">Periodo de Amortización (Payback):</span>
+              <span id="res-solar-payback" style="font-size: 1.25rem; font-weight: 800; color: #047857;">Aprox. 4.2 años</span>
+            </div>
+          </div>
+        </form>
+      </section>
+
+      <!-- Bloque AdSense Intermedio -->
+      <div class="ad-slot-wrapper">
+        <span class="ad-label">Publicidad</span>
+        <div class="ad-box in-article-banner" data-ad-slot="inArticle"></div>
+      </div>
+
+      <!-- Herramienta 2: Electrodomésticos -->
+      <section id="herramienta-electrodomesticos" class="calculator-box">
+        <span class="badge">Factura de Luz & Consumo</span>
+        <h2 class="calculator-title">2. Calculadora de Consumo y Coste de Electrodomésticos</h2>
+        <p style="color: #64748b; margin-bottom: 18px;">
+          Descubre cuánto dinero te cuesta exactamente al mes y al año tener encendido el termo eléctrico, el aire acondicionado, la lavadora o tu ordenador.
+        </p>
+
+        <form id="appliance-calc-form" onsubmit="event.preventDefault();">
+          <div style="margin-bottom: 18px;">
+            <label for="app-preset" style="font-weight: 600; display: block; margin-bottom: 6px; font-size: 0.9rem;">Cargar Electrodoméstico Típico:</label>
+            <select id="app-preset" class="input-control">
+              <option value="aire" selected>Aire Acondicionado Inverter (1.200 W - 6h/día)</option>
+              <option value="frigorifico">Frigorífico Combi A++ (150 W - 24h continuo)</option>
+              <option value="termo">Termo Eléctrico 80L (1.500 W - 4h/día)</option>
+              <option value="lavadora">Lavadora Programa Caliente (1.800 W - 1.5h/día)</option>
+              <option value="horno">Horno Eléctrico (2.000 W - 1h/día)</option>
+              <option value="pc">PC de Escritorio / Teletrabajo (200 W - 8h/día)</option>
+            </select>
+          </div>
+
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px;">
+            <div class="form-group">
+              <label for="app-watts" style="font-weight: 600; display: block; margin-bottom: 6px; font-size: 0.9rem;">Potencia Nominal (Vatios - W):</label>
+              <input type="number" id="app-watts" class="input-control" value="1200" min="10" step="50">
+            </div>
+
+            <div class="form-group">
+              <label for="app-hours" style="font-weight: 600; display: block; margin-bottom: 6px; font-size: 0.9rem;">Horas de Uso Diario:</label>
+              <input type="number" id="app-hours" class="input-control" value="6" min="0.1" max="24" step="0.5">
+            </div>
+
+            <div class="form-group">
+              <label for="app-kwh-price" style="font-weight: 600; display: block; margin-bottom: 6px; font-size: 0.9rem;">Precio del kWh (€):</label>
+              <input type="number" id="app-kwh-price" class="input-control" value="0.18" min="0.05" step="0.01">
+            </div>
+          </div>
+
+          <div class="results-panel">
+            <div class="result-item">
+              <span style="font-weight: 600;">Consumo Mensual Estimado:</span>
+              <span id="app-res-kwh" class="result-value" style="color: #064e3b;">216.0 kWh / mes</span>
+            </div>
+            <div class="result-item">
+              <span>Coste Diario:</span>
+              <span id="app-res-daily" style="font-weight: 600;">1.30 € / día</span>
+            </div>
+            <div class="result-item">
+              <span style="font-weight: 700; color: #047857;">Coste en tu Factura Mensual:</span>
+              <span id="app-res-monthly" class="result-value" style="color: #059669;">38.88 € / mes</span>
+            </div>
+            <div class="result-item" style="border-top: 2px solid #059669; padding-top: 10px;">
+              <span style="font-weight: 700;">Gasto Acumulado al Año:</span>
+              <span id="app-res-yearly" style="font-size: 1.25rem; font-weight: 800; color: #047857;">473.04 € / año</span>
+            </div>
+          </div>
+        </form>
+      </section>
+
+    </div>
+  </main>
+
+  <div class="container">
+    <div class="ad-slot-wrapper">
+      <span class="ad-label">Publicidad</span>
+      <div class="ad-box footer-banner" data-ad-slot="footer"></div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container footer-bottom">
+      <p>&copy; 2026 EcoVatio. Eficiencia y sostenibilidad doméstica.</p>
+      <div>
+        <a href="../politica-de-privacidad.html" style="color: #a7f3d0; margin-right: 15px;">Privacidad</a>
+        <a href="../terminos-y-condiciones.html" style="color: #a7f3d0;">Términos</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/ads-config.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>

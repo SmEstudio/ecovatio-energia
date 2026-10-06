@@ -1,0 +1,1006 @@
+/* ==========================================================================
+   EcoVatio - Eficiencia Energética, Autoconsumo Solar & Climatización
+   DISEÑO EXCLUSIVO: Architectural Clean-Tech & Solar Engineering Blueprint
+   ========================================================================== */
+
+:root {
+  /* Paleta Solar Engineering & Clean-Tech */
+  --primary: #f59e0b;          /* Photovoltaic Solar Amber */
+  --primary-hover: #d97706;
+  --primary-dark: #b45309;
+  --primary-light: #fef3c7;
+  --primary-border: #fde68a;
+  
+  --secondary: #065f46;        /* Deep Engineering Pine */
+  --secondary-hover: #047857;
+  --secondary-dark: #064e3b;
+  --secondary-light: #ecfdf5;
+  --secondary-border: #a7f3d0;
+  
+  --accent: #0284c7;           /* Technical Precision Cyan */
+  --accent-hover: #0369a1;
+  --accent-light: #e0f2fe;
+  
+  --tech-dark: #0f172a;        /* Architectural Slate */
+  --tech-surface: #1e293b;
+  
+  --text-main: #1e293b;        /* Crisp Charcoal */
+  --text-muted: #64748b;       /* Spec Grey */
+  --text-heading: #0f172a;
+  
+  --bg-main: #fcfcfd;          /* Drafting Paper Canvas */
+  --bg-card: #ffffff;
+  --bg-surface: #fffdf7;
+  
+  --border: #e2e8f0;           /* Blueprint Line */
+  --border-focus: #f59e0b;
+  --border-tech: rgba(245, 158, 11, 0.35);
+  
+  --ad-bg: #f8fafc;
+  --ad-border: #cbd5e1;
+  
+  --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.06);
+  --shadow-md: 0 8px 24px -4px rgba(245, 158, 11, 0.12), 0 3px 8px -2px rgba(15, 23, 42, 0.04);
+  --shadow-lg: 0 18px 36px -4px rgba(245, 158, 11, 0.18), 0 6px 14px -2px rgba(6, 95, 70, 0.08);
+  
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 14px;
+  
+  --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-main);
+  background-image: 
+    linear-gradient(rgba(245, 158, 11, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(245, 158, 11, 0.05) 1px, transparent 1px);
+  background-size: 32px 32px;
+  color: var(--text-main);
+  line-height: 1.7;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, .calculator-title, .article-title, .section-header h2 {
+  color: var(--text-heading);
+  letter-spacing: -0.025em;
+  font-weight: 800;
+}
+
+a {
+  color: var(--primary-hover);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+a:hover {
+  color: var(--secondary);
+  text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.container {
+  width: 100%;
+  max-width: 1220px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ==========================================================================
+   Cabecera Architectural Clean-Tech
+   ========================================================================== */
+.site-header {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-top: 3px solid var(--primary);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 10px rgba(15, 23, 42, 0.04);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.55rem;
+  font-weight: 900;
+  color: var(--secondary);
+  text-decoration: none;
+  letter-spacing: -0.03em;
+}
+
+.logo span {
+  color: var(--primary);
+}
+
+.logo-icon {
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+  color: #ffffff;
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  box-shadow: 0 2px 8px rgba(245, 158, 11, 0.3);
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 8px;
+}
+
+.nav-links a {
+  color: var(--text-main);
+  font-weight: 600;
+  font-size: 0.94rem;
+  padding: 8px 14px;
+  border-radius: var(--radius-sm);
+  transition: all 0.2s ease;
+  border: 1px solid transparent;
+}
+
+.nav-links a:hover {
+  color: var(--primary-hover);
+  background: var(--primary-light);
+  border-color: var(--primary-border);
+  text-decoration: none;
+}
+
+.nav-links a.active {
+  color: var(--secondary);
+  background: var(--secondary-light);
+  border-color: var(--secondary-border);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 6px 12px;
+  font-size: 1.4rem;
+  color: var(--secondary);
+  cursor: pointer;
+}
+
+/* ==========================================================================
+   Contenedores AdSense
+   ========================================================================== */
+.ad-slot-wrapper {
+  margin: 28px auto;
+  text-align: center;
+  max-width: 100%;
+  clear: both;
+}
+
+.ad-label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--primary-hover);
+  font-weight: 700;
+  margin-bottom: 6px;
+  display: block;
+  font-family: var(--font-mono);
+}
+
+.ad-box {
+  background: var(--ad-bg);
+  border: 1px dashed var(--ad-border);
+  border-radius: var(--radius-sm);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  margin: 0 auto;
+  min-height: 90px;
+  overflow: hidden;
+}
+
+.ad-box.header-banner { max-width: 728px; min-height: 90px; }
+.ad-box.sidebar-banner { max-width: 300px; min-height: 250px; }
+.ad-box.in-article-banner { max-width: 100%; min-height: 120px; }
+.ad-box.footer-banner { max-width: 970px; min-height: 90px; }
+
+.ad-placeholder-text {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+/* ==========================================================================
+   Hero Section: Solar Engineering Control Center
+   ========================================================================== */
+.hero {
+  background: linear-gradient(135deg, #0f172a 0%, #064e3b 60%, #047857 100%);
+  color: #ffffff;
+  border-bottom: 3px solid var(--primary);
+  padding: 65px 0 55px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: radial-gradient(circle at 80% 20%, rgba(245, 158, 11, 0.25) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.hero-content {
+  text-align: center;
+  max-width: 860px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 16px;
+  background: rgba(245, 158, 11, 0.15);
+  color: #fbbf24;
+  border: 1px solid rgba(245, 158, 11, 0.4);
+  border-radius: var(--radius-sm);
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-family: var(--font-mono);
+}
+
+.hero h1 {
+  font-size: 2.85rem;
+  font-weight: 900;
+  color: #ffffff;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+.hero p {
+  font-size: 1.18rem;
+  color: #d1fae5;
+  margin-bottom: 30px;
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.7;
+}
+
+.hero-cta {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 28px;
+  font-size: 0.96rem;
+  font-weight: 700;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: all 0.25s ease;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+  color: #ffffff;
+  border: 1px solid #fbbf24;
+  box-shadow: 0 4px 14px rgba(245, 158, 11, 0.35);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #d97706 0%, #b45309 100%);
+  color: #ffffff;
+  text-decoration: none;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(245, 158, 11, 0.45);
+}
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(6px);
+}
+
+.btn-secondary:hover {
+  background: #ffffff;
+  color: var(--secondary);
+  text-decoration: none;
+  transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   Layout Principal & Engineering Cards
+   ========================================================================== */
+.main-layout {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 36px;
+  margin: 40px 0;
+}
+
+.main-layout.single-column {
+  grid-template-columns: 1fr;
+  max-width: 860px;
+  margin: 40px auto;
+}
+
+.section-header {
+  margin-bottom: 24px;
+  border-bottom: 2px solid var(--border);
+  padding-bottom: 12px;
+}
+
+.section-header h2 {
+  font-size: 1.95rem;
+  color: var(--secondary);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.section-header p {
+  color: var(--text-muted);
+  font-size: 0.98rem;
+  margin-top: 4px;
+}
+
+/* Cards Estilo Ficha Técnica / Spec Sheet */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  gap: 24px;
+}
+
+.card {
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--primary);
+  border-radius: var(--radius-sm);
+  padding: 26px;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  transition: all 0.25s ease;
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: var(--primary);
+  border-left-color: var(--secondary);
+  box-shadow: var(--shadow-md);
+}
+
+.card-tag {
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: var(--secondary);
+  background: var(--secondary-light);
+  border: 1px solid var(--secondary-border);
+  padding: 4px 10px;
+  border-radius: 2px;
+  display: inline-block;
+  align-self: flex-start;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-family: var(--font-mono);
+  margin-bottom: 12px;
+}
+
+.card h3 {
+  font-size: 1.26rem;
+  font-weight: 800;
+  color: var(--tech-dark);
+  margin-bottom: 12px;
+  line-height: 1.35;
+}
+
+.card h3 a {
+  color: var(--tech-dark);
+}
+
+.card h3 a:hover {
+  color: var(--primary-hover);
+  text-decoration: none;
+}
+
+.card p {
+  color: var(--text-muted);
+  font-size: 0.94rem;
+  line-height: 1.65;
+  flex-grow: 1;
+  margin-bottom: 18px;
+}
+
+.card-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  border-top: 1px solid var(--border);
+  padding-top: 12px;
+  font-family: var(--font-mono);
+}
+
+/* ==========================================================================
+   Calculadora de Dimensionamiento Solar
+   ========================================================================== */
+.calculator-box {
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-top: 4px solid var(--primary);
+  border-radius: var(--radius-md);
+  padding: 34px;
+  box-shadow: var(--shadow-md);
+  margin-bottom: 38px;
+}
+
+.calculator-title {
+  font-size: 1.65rem;
+  color: var(--secondary);
+  margin-bottom: 8px;
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--tech-dark);
+  margin-bottom: 6px;
+}
+
+.input-control {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 1rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: #ffffff;
+  outline: none;
+  font-family: var(--font-mono);
+  transition: all 0.2s ease;
+}
+
+.input-control:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.18);
+}
+
+.results-panel {
+  background: #0f172a;
+  color: #ffffff;
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  border-radius: var(--radius-md);
+  padding: 26px;
+  margin-top: 26px;
+  box-shadow: var(--shadow-md);
+}
+
+.results-panel h4 {
+  font-size: 1.18rem;
+  color: #fbbf24;
+  margin-bottom: 16px;
+  font-family: var(--font-mono);
+}
+
+.result-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.15);
+}
+
+.result-item:last-child {
+  border-bottom: none;
+}
+
+.result-label {
+  font-weight: 500;
+  color: #d1fae5;
+  font-size: 0.94rem;
+}
+
+.result-value {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #fbbf24;
+  font-family: var(--font-mono);
+}
+
+/* ==========================================================================
+   Sidebar Widgets
+   ========================================================================== */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.widget {
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-top: 3px solid var(--secondary);
+  border-radius: var(--radius-sm);
+  padding: 22px;
+  box-shadow: var(--shadow-sm);
+}
+
+.widget-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--secondary);
+  border-bottom: 2px solid var(--secondary-light);
+  padding-bottom: 10px;
+  margin-bottom: 16px;
+}
+
+.widget-list {
+  list-style: none;
+}
+
+.widget-list li {
+  padding: 9px 0;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.widget-list li:last-child {
+  border-bottom: none;
+}
+
+.widget-list a {
+  color: var(--text-main);
+  font-weight: 600;
+  font-size: 0.92rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.widget-list a:hover {
+  color: var(--primary-hover);
+  text-decoration: none;
+}
+
+/* ==========================================================================
+   Contenido de Artículos (Técnico & Riguroso)
+   ========================================================================== */
+.article-header {
+  margin-bottom: 30px;
+}
+
+.breadcrumbs {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.article-title {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: var(--tech-dark);
+  line-height: 1.25;
+  margin-bottom: 18px;
+}
+
+.article-meta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border);
+  flex-wrap: wrap;
+}
+
+.table-of-contents {
+  background: var(--secondary-light);
+  border: 1px solid var(--secondary-border);
+  border-left: 4px solid var(--secondary);
+  border-radius: var(--radius-sm);
+  padding: 22px 26px;
+  margin: 28px 0;
+}
+
+.toc-title {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--secondary);
+  margin-bottom: 12px;
+}
+
+.table-of-contents ul {
+  padding-left: 20px;
+}
+
+.table-of-contents li {
+  margin-bottom: 8px;
+}
+
+.article-body {
+  font-size: 1.05rem;
+  line-height: 1.82;
+  color: #334155;
+}
+
+.article-body h2 {
+  font-size: 1.8rem;
+  color: var(--secondary);
+  margin: 38px 0 16px;
+  padding-top: 10px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 8px;
+}
+
+.article-body h3 {
+  font-size: 1.35rem;
+  color: var(--tech-dark);
+  margin: 26px 0 12px;
+}
+
+.article-body p {
+  margin-bottom: 22px;
+}
+
+.article-body ul, .article-body ol {
+  margin: 0 0 24px 26px;
+}
+
+.article-body li {
+  margin-bottom: 8px;
+}
+
+.callout {
+  background: #fffbeb;
+  border: 1px solid #fde68a;
+  border-left: 4px solid var(--primary);
+  padding: 18px 24px;
+  border-radius: var(--radius-sm);
+  margin: 28px 0;
+}
+
+.callout-title {
+  font-weight: 800;
+  color: #b45309;
+  margin-bottom: 6px;
+}
+
+/* ==========================================================================
+   Tablas de Especificaciones Técnicas
+   ========================================================================== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 30px 0;
+  background: #ffffff;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+}
+
+th {
+  background: #0f172a;
+  color: #ffffff;
+  padding: 14px 18px;
+  text-align: left;
+  font-weight: 700;
+  border-bottom: 2px solid var(--primary);
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+}
+
+td {
+  padding: 14px 18px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-main);
+  font-size: 0.94rem;
+}
+
+tr:nth-child(even) {
+  background-color: #fafaf9;
+}
+
+/* ==========================================================================
+   Acordeón de Preguntas Frecuentes
+   ========================================================================== */
+.faq-accordion {
+  margin: 28px 0;
+}
+
+.faq-item {
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--primary);
+  border-radius: var(--radius-sm);
+  margin-bottom: 12px;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.faq-question {
+  width: 100%;
+  text-align: left;
+  padding: 18px 22px;
+  font-size: 1.08rem;
+  font-weight: 700;
+  color: var(--tech-dark);
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.2s;
+}
+
+.faq-question:hover {
+  background: #fffdf5;
+  color: var(--primary-hover);
+}
+
+.faq-question::after {
+  content: "+";
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--primary);
+  transition: transform 0.2s;
+}
+
+.faq-item.active .faq-question::after {
+  transform: rotate(45deg);
+}
+
+.faq-answer {
+  display: none;
+  padding: 0 22px 18px;
+  color: #475569;
+  font-size: 0.96rem;
+  line-height: 1.68;
+}
+
+.faq-item.active .faq-answer {
+  display: block;
+}
+
+/* ==========================================================================
+   Páginas Legales
+   ========================================================================== */
+.legal-content {
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 40px;
+  box-shadow: var(--shadow-sm);
+}
+
+.legal-content h1 {
+  font-size: 2.2rem;
+  color: var(--secondary);
+  margin-bottom: 12px;
+}
+
+.legal-content h2 {
+  font-size: 1.45rem;
+  color: var(--secondary);
+  margin: 28px 0 14px;
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+.site-footer {
+  background: #0f172a;
+  color: #cbd5e1;
+  padding: 65px 0 32px;
+  margin-top: 65px;
+  border-top: 4px solid var(--primary);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.footer-brand h3 {
+  color: #ffffff;
+  font-size: 1.5rem;
+  margin-bottom: 14px;
+}
+
+.footer-brand p {
+  font-size: 0.92rem;
+  line-height: 1.65;
+  color: #94a3b8;
+}
+
+.footer-col h4 {
+  color: #fbbf24;
+  font-size: 1.08rem;
+  margin-bottom: 18px;
+  font-family: var(--font-mono);
+}
+
+.footer-col ul {
+  list-style: none;
+}
+
+.footer-col li {
+  margin-bottom: 12px;
+}
+
+.footer-col a {
+  color: #94a3b8;
+  font-size: 0.92rem;
+  transition: color 0.2s;
+}
+
+.footer-col a:hover {
+  color: #ffffff;
+}
+
+.footer-bottom {
+  border-top: 1px solid #1e293b;
+  padding-top: 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.86rem;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+/* ==========================================================================
+   Banner de Cookies
+   ========================================================================== */
+.cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #0f172a;
+  color: #ffffff;
+  padding: 22px;
+  z-index: 9999;
+  border-top: 2px solid var(--primary);
+  display: none;
+}
+
+.cookie-content {
+  max-width: 1220px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.cookie-text a {
+  color: #fbbf24;
+  text-decoration: underline;
+}
+
+/* ==========================================================================
+   Barra de Progreso de Lectura
+   ========================================================================== */
+#reading-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #f59e0b, #047857);
+  width: 0%;
+  z-index: 99999;
+  transition: width 0.1s ease;
+}
+
+/* ==========================================================================
+   Responsive
+   ========================================================================== */
+@media (max-width: 992px) {
+  .main-layout {
+    grid-template-columns: 1fr;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .article-title {
+    font-size: 2rem;
+  }
+  .main-nav {
+    display: none;
+    position: absolute;
+    top: 72px;
+    left: 0;
+    right: 0;
+    background: #ffffff;
+    border-bottom: 2px solid var(--primary);
+    padding: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  .main-nav.active {
+    display: block;
+  }
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .menu-toggle {
+    display: block;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoVatio - Eficiencia Energética, Autoconsumo Solar y Climatización Inteligente</title>
+  <meta name="description" content="Aprende a reducir tu factura eléctrica hasta un 70%: dimensionamiento de paneles solares, comparativa de aerotermia y calculadoras interactivas de consumo energético.">
+  <meta name="keywords" content="paneles solares calculadora, autoconsumo fotovoltaico, aerotermia vs gas, reducir factura de luz, consumo electrodomesticos kwh, eficiencia energetica hogar">
+  <link rel="canonical" href="https://ecovatio-energia.com/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="EcoVatio - Transición Energética y Ahorro en el Hogar">
+  <meta property="og:description" content="Calculadoras solares, guías de aislamiento y análisis objetivo de climatización de alta eficiencia.">
+  <meta property="og:url" content="https://ecovatio-energia.com/">
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23f59e0b'/><text y='70' x='50' text-anchor='middle' font-size='60'>☀️</text></svg>">
+  <link rel="stylesheet" href="css/style.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "EcoVatio",
+    "url": "https://ecovatio-energia.com/",
+    "description": "Portal especializado en energía solar fotovoltaica, aerotermia y optimización del consumo eléctrico doméstico.",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://ecovatio-energia.com/?s={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Cabecera -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">☀️</div>
+        Eco<span>Vatio</span>
+      </a>
+      <button class="menu-toggle" aria-label="Abrir menú">☰</button>
+      <nav class="main-nav">
+        <ul class="nav-links">
+          <li><a href="index.html" class="active">Inicio</a></li>
+          <li><a href="herramientas/index.html">Calculadoras</a></li>
+          <li><a href="articulos/guia-paneles-solares-autoconsumo-hogar.html">Energía Solar</a></li>
+          <li><a href="articulos/aerotermia-vs-gas-calderas-comparativa.html">Aerotermia</a></li>
+          <li><a href="articulos/como-entender-factura-de-la-luz-potencia-kwh.html">Factura de Luz</a></li>
+          <li><a href="sobre-nosotros.html">Nosotros</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Banner Superior AdSense -->
+  <div class="container">
+    <div class="ad-slot-wrapper">
+      <span class="ad-label">Publicidad</span>
+      <div class="ad-box header-banner" data-ad-slot="header"></div>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <span class="badge">Sostenibilidad & Ahorro Eléctrico</span>
+      <h1>Genera tu Propia Energía Limpia y Reduce Drásticamente tus Facturas</h1>
+      <p>Guías técnicas independientes, análisis rigurosos de climatización sin sesgos comerciales y herramientas matemáticas para dimensionar tu instalación solar.</p>
+      <div class="hero-cta">
+        <a href="#calculadora-solar" class="btn btn-primary">Simular Instalación Solar</a>
+        <a href="herramientas/index.html" class="btn btn-secondary">Ver Calculadoras Energéticas</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Barra de Indicadores Energéticos EcoVatio -->
+  <div style="background: #ffffff; border-bottom: 2px solid #f59e0b; padding: 12px 0; font-size: 0.88rem; box-shadow: 0 2px 8px rgba(245,158,11,0.06);">
+    <div class="container" style="display: flex; gap: 16px; align-items: center; justify-content: space-between; flex-wrap: wrap;">
+      <span style="display: inline-flex; align-items: center; gap: 6px;"><strong style="color: #d97706;">☀️ Radiación Media:</strong> 4.6 HSP (Horas Sol Pico)</span>
+      <span style="display: inline-flex; align-items: center; gap: 6px;"><strong style="color: #059669;">🌱 Ahorro de CO2:</strong> ~1.4 Tn/año por tejado</span>
+      <span style="display: inline-flex; align-items: center; gap: 6px;"><strong style="color: #0284c7;">⚡ Eficiencia N-Type:</strong> 22.5% TOPCon</span>
+      <span style="display: inline-flex; align-items: center; gap: 6px;"><strong style="color: #16a34a;">💰 Retorno ROI:</strong> 3.8 a 4.5 Años</span>
+    </div>
+  </div>
+
+  <!-- Contenido Central en Dos Columnas -->
+  <main class="container">
+    <div class="main-layout">
+      
+      <div class="content-area">
+        
+        <!-- Calculadora Destacada: Autoconsumo Solar -->
+        <section id="calculadora-solar" class="calculator-box">
+          <span class="badge">Simulador Fotovoltaico</span>
+          <h2 class="calculator-title">Calculadora de Paneles Solares, Potencia y Retorno (ROI)</h2>
+          <p style="color: #64748b; margin-bottom: 20px; font-size: 0.95rem;">
+            Calcula la cantidad de paneles recomendados para tu tejado según tu consumo mensual, las horas de sol de tu región y el tiempo estimado de amortización económica.
+          </p>
+
+          <form id="solar-calc-form" onsubmit="event.preventDefault();">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
+              <div class="form-group">
+                <label for="solar-monthly-bill" style="font-weight: 600; display: block; margin-bottom: 6px; font-size: 0.9rem;">Gasto Mensual Actual en Luz (€):</label>
+                <input type="number" id="solar-monthly-bill" class="input-control" value="120" min="20" max="1500" step="5">
+              </div>
+
+              <div class="form-group">
+                <label for="solar-sun-hours" style="font-weight: 600; display: block; margin-bottom: 6px; font-size: 0.9rem;">Zona Solar (Horas Sol Pico / HSP):</label>
+                <select id="solar-sun-hours" class="input-control">
+                  <option value="3.8">Zona Norte / Clima Templado (3.8 HSP)</option>
+                  <option value="4.6" selected>Zona Centro / Clima Continental (4.6 HSP)</option>
+                  <option value="5.4">Zona Sur / Alta Radiación (5.4 HSP)</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="solar-panel-wattage" style="font-weight: 600; display: block; margin-bottom: 6px; font-size: 0.9rem;">Potencia del Panel (Wp):</label>
+                <select id="solar-panel-wattage" class="input-control">
+                  <option value="400">400 Wp Monocristalino</option>
+                  <option value="450" selected>450 Wp N-Type TopCon</option>
+                  <option value="500">500 Wp Alto Rendimiento</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="results-panel">
+              <div class="result-item">
+                <span style="font-weight: 600;">Módulos Fotovoltaicos Sugeridos:</span>
+                <span id="res-solar-panels" class="result-value">8 módulos</span>
+              </div>
+              <div class="result-item">
+                <span style="font-weight: 600;">Potencia Pico del Sistema:</span>
+                <span id="res-solar-kwp" class="result-value" style="color: #064e3b;">3.60 kWp instalados</span>
+              </div>
+              <div class="result-item">
+                <span style="font-weight: 600;">Ahorro Estimado en tu Factura:</span>
+                <span id="res-solar-savings" class="result-value" style="color: #059669;">936 € / año</span>
+              </div>
+              <div class="result-item" style="border-top: 2px solid #059669; padding-top: 10px;">
+                <span style="font-weight: 600; font-size: 1.05rem;">Retorno de la Inversión (Payback):</span>
+                <span id="res-solar-payback" style="font-size: 1.25rem; font-weight: 800; color: #047857;">Aprox. 4.2 años</span>
+              </div>
+            </div>
+          </form>
+        </section>
+
+        <!-- Bloque AdSense Intermedio -->
+        <div class="ad-slot-wrapper">
+          <span class="ad-label">Publicidad</span>
+          <div class="ad-box in-article-banner" data-ad-slot="inArticle"></div>
+        </div>
+
+        <!-- Sección de Artículos Clave -->
+        <section>
+          <div style="margin-bottom: 24px;">
+            <h2 style="font-size: 1.75rem; color: #064e3b; font-weight: 800;">Guías Técnicas de Eficiencia y Autoconsumo</h2>
+            <p style="color: #64748b;">Información rigurosa sobre tecnologías limpias y optimización energética para tu vivienda.</p>
+          </div>
+
+          <div class="cards-grid">
+            <article class="card">
+              <span class="card-tag">Autoconsumo Fotovoltaico</span>
+              <h3><a href="articulos/guia-paneles-solares-autoconsumo-hogar.html">Guía Completa de Paneles Solares para el Hogar: Tipos, Inversores y Baterías</a></h3>
+              <p>Módulos N-Type vs P-Type, microinversores frente a inversores centrales de string y cómo funciona la compensación de excedentes con batería virtual.</p>
+              <div class="card-meta">
+                <span>Ingeniería EcoVatio</span>
+                <span>Lectura: 10 min</span>
+              </div>
+            </article>
+
+            <article class="card">
+              <span class="card-tag">Climatización Térmica</span>
+              <h3><a href="articulos/aerotermia-vs-gas-calderas-comparativa.html">Aerotermia vs Caldera de Gas Natural: ¿Merece la Pena el Cambio Económico?</a></h3>
+              <p>Análisis del coeficiente de rendimiento (COP estacional), coste de inversión inicial, compatibilidad con radiadores de aluminio y ahorro a 10 años.</p>
+              <div class="card-meta">
+                <span>Ingeniería EcoVatio</span>
+                <span>Lectura: 9 min</span>
+              </div>
+            </article>
+
+            <article class="card">
+              <span class="card-tag">Envolvente Térmica</span>
+              <h3><a href="articulos/aislamiento-termico-ventanas-ahorro-factura.html">Aislamiento Térmico en Ventanas y Fachadas: La Primera Gran Inversión</a></h3>
+              <p>Por qué aislar tu vivienda reduce un 40% la demanda energética antes de comprar cualquier sistema de calefacción. Rotura de puente térmico y vidrios bajo emisivos.</p>
+              <div class="card-meta">
+                <span>Ingeniería EcoVatio</span>
+                <span>Lectura: 8 min</span>
+              </div>
+            </article>
+
+            <article class="card">
+              <span class="card-tag">Mercado Eléctrico</span>
+              <h3><a href="articulos/como-entender-factura-de-la-luz-potencia-kwh.html">Cómo Leer y Optimizar tu Factura de la Luz: Potencia Contratada y Horarios</a></h3>
+              <p>Descubre si estás pagando de más por kW contratados innecesarios y cómo utilizar los tramos punta, llano y valle para ahorrar más de 200€ al año.</p>
+              <div class="card-meta">
+                <span>Ingeniería EcoVatio</span>
+                <span>Lectura: 8 min</span>
+              </div>
+            </article>
+
+            <article class="card">
+              <span class="card-tag">Almacenamiento Solar</span>
+              <h3><a href="articulos/baterias-solares-litio-almacenamiento-merecen-la-pena.html">Baterías Físicas para Paneles Solares: ¿Son Rentables en 2026 o Conviene la Batería Virtual?</a></h3>
+              <p>Análisis de baterías LiFePO4 de litio, ciclos de vida útil, coste nivelado de almacenamiento (LCOS) y cuándo elegir batería física vs compensación virtual.</p>
+              <div class="card-meta">
+                <span>Ingeniería EcoVatio</span>
+                <span>Lectura: 10 min</span>
+              </div>
+            </article>
+
+            <article class="card">
+              <span class="card-tag">Movilidad Eléctrica</span>
+              <h3><a href="articulos/cargador-coche-electrico-en-casa-instalacion-y-coste.html">Instalar un Cargador de Coche Eléctrico en Casa: Wallbox, Potencia y Ahorro Real</a></h3>
+              <p>Todo sobre la instalación Modo 3, balanceo dinámico de carga para evitar subir la potencia contratada y comparativa de coste por 100 km frente al combustible fósil.</p>
+              <div class="card-meta">
+                <span>Ingeniería EcoVatio</span>
+                <span>Lectura: 11 min</span>
+              </div>
+            </article>
+
+            <article class="card">
+              <span class="card-tag">Domótica Térmica</span>
+              <h3><a href="articulos/termostatos-inteligentes-y-domotica-ahorro-calefaccion.html">Termostatos Inteligentes y Zonificación: Recorta un 30% el Gasto de Calefacción</a></h3>
+              <p>Protocolo OpenTherm modulante frente al termostato On/Off tradicional, cabezales TRV radiador y algoritmos de predicción meteorológica para el hogar.</p>
+              <div class="card-meta">
+                <span>Ingeniería EcoVatio</span>
+                <span>Lectura: 9 min</span>
+              </div>
+            </article>
+
+            <article class="card">
+              <span class="card-tag">Financiación & Fiscalidad</span>
+              <h3><a href="articulos/subvenciones-fondos-europeos-paneles-solares-y-rehabilitacion.html">Deducciones en IRPF y Bonificaciones de IBI para Paneles Solares y Aerotermia</a></h3>
+              <p>Guía de deducciones fiscales de hasta el 60% en la Renta, bonificación del 50% de IBI municipal y requisitos indispensables del Certificado Energético CEE.</p>
+              <div class="card-meta">
+                <span>Ingeniería EcoVatio</span>
+                <span>Lectura: 10 min</span>
+              </div>
+            </article>
+
+            <!-- Artículo 9 -->
+            <article class="card">
+              <span class="card-tag">Compensación Solar</span>
+              <h3><a href="articulos/baterias-virtuales-como-funcionan-compensacion.html">Baterías Virtuales: Cómo Conseguir Facturas de Electricidad a Cero Euros</a></h3>
+              <p>Almacena el valor económico de tus excedentes solares de verano para pagar el invierno, el término de potencia y tus segundas residencias.</p>
+              <div class="card-meta">
+                <span>Ingeniería EcoVatio</span>
+                <span>Lectura: 10 min</span>
+              </div>
+            </article>
+
+            <!-- Artículo 10 -->
+            <article class="card">
+              <span class="card-tag">Eficiencia Edificatoria</span>
+              <h3><a href="articulos/rehabilitacion-energetica-certificado-eficiencia-vivienda.html">Certificado de Eficiencia Energética: Cómo Pasar de la Letra G a la A</a></h3>
+              <p>Calendario de la directiva europea EPBD, intervenciones de máximo impacto en la demanda y revalorización patrimonial de tu vivienda.</p>
+              <div class="card-meta">
+                <span>Ingeniería EcoVatio</span>
+                <span>Lectura: 10 min</span>
+              </div>
+            </article>
+
+            <!-- Artículo 11 -->
+            <article class="card">
+              <span class="card-tag">Climatización Renovable</span>
+              <h3><a href="articulos/aerotermia-radiadores-convencionales-vs-suelo-radiante.html">Aerotermia con Radiadores Tradicionales vs Suelo Radiante: ¿Funciona?</a></h3>
+              <p>Estudio termodinámico sobre temperaturas de impulsión a 35°C vs 65°C, radiadores sobredimensionados y refrigeración estival con fancoils.</p>
+              <div class="card-meta">
+                <span>Ingeniería EcoVatio</span>
+                <span>Lectura: 11 min</span>
+              </div>
+            </article>
+
+            <!-- Artículo 12 -->
+            <article class="card">
+              <span class="card-tag">Comunidades Solares</span>
+              <h3><a href="articulos/comunidades-energeticas-locales-autoconsumo-colectivo.html">Autoconsumo Colectivo: Placas Solares Compartidas en Bloques de Pisos</a></h3>
+              <p>Aprende a compartir energía en azoteas comunitarias con coeficientes dinámicos, radio de 2.000m y acuerdos vecinales de propiedad horizontal.</p>
+              <div class="card-meta">
+                <span>Ingeniería EcoVatio</span>
+                <span>Lectura: 10 min</span>
+              </div>
+            </article>
+          </div>
+        </section>
+
+      </div>
+
+      <!-- Barra Lateral -->
+      <aside class="sidebar">
+        
+        <div class="ad-slot-wrapper" style="margin-top: 0;">
+          <span class="ad-label">Publicidad</span>
+          <div class="ad-box sidebar-banner" data-ad-slot="sidebar"></div>
+        </div>
+
+        <div class="widget">
+          <h3 class="widget-title">Simuladores Online</h3>
+          <ul class="widget-list">
+            <li><a href="#calculadora-solar">☀️ Dimensionar Paneles Solares</a></li>
+            <li><a href="herramientas/index.html#herramienta-electrodomesticos">⚡ Consumo de Electrodomésticos en kWh</a></li>
+            <li><a href="articulos/aerotermia-vs-gas-calderas-comparativa.html">🔥 Comparativa Caldera vs Aerotermia</a></li>
+          </ul>
+        </div>
+
+        <div class="widget" style="background: #f0fdf4; border-color: #bbf7d0;">
+          <h3 class="widget-title" style="color: #064e3b;">🌱 Independencia Editorial</h3>
+          <p style="font-size: 0.88rem; color: #166534; line-height: 1.55;">
+            No somos una comercializadora de energía ni instaladores comerciales. Nuestras calculadoras aplican fórmulas oficiales de la directiva europea EPBD e IDAE para ofrecerte estimaciones 100% neutrales.
+          </p>
+        </div>
+
+      </aside>
+
+    </div>
+  </main>
+
+  <!-- Banner Inferior AdSense -->
+  <div class="container">
+    <div class="ad-slot-wrapper">
+      <span class="ad-label">Publicidad</span>
+      <div class="ad-box footer-banner" data-ad-slot="footer"></div>
+    </div>
+  </div>
+
+  <!-- Pie de Página -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>☀️ EcoVatio</h3>
+          <p>Portal divulgativo de energía solar fotovoltaica, descarbonización doméstica y eficiencia energética para hogares.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Herramientas</h4>
+          <ul>
+            <li><a href="index.html#calculadora-solar">Calculadora Solar</a></li>
+            <li><a href="herramientas/index.html#herramienta-electrodomesticos">Coste Electrodomésticos</a></li>
+            <li><a href="articulos/como-entender-factura-de-la-luz-potencia-kwh.html">Optimizar Factura</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal & Transparencia</h4>
+          <ul>
+            <li><a href="politica-de-privacidad.html">Privacidad</a></li>
+            <li><a href="terminos-y-condiciones.html">Términos de Uso</a></li>
+            <li><a href="politica-de-cookies.html">Cookies</a></li>
+            <li><a href="sobre-nosotros.html">Quiénes Somos</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contacto</h4>
+          <p style="color: #ffffff; font-weight: 600;">contacto@ecovatio-energia.com</p>
+          <p style="font-size: 0.85rem; color: #a7f3d0; margin-top: 8px;">Monetizado éticamente mediante Google AdSense.</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 EcoVatio. Todos los derechos reservados.</p>
+        <p>Cumplimiento estricto con las directrices de Google AdSense.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Cookie Banner -->
+  <div id="cookie-banner" class="cookie-banner">
+    <div class="cookie-content">
+      <div class="cookie-text">
+        Utilizamos cookies técnicas y publicitarias de Google AdSense para sostener este portal de acceso libre y gratuito. Consulta nuestra <a href="politica-de-cookies.html" style="color: #6ee7b7; text-decoration: underline;">Política de Cookies</a>.
+      </div>
+      <div class="cookie-actions">
+        <button id="cookie-accept" class="btn btn-primary" style="padding: 8px 18px; font-size: 0.88rem;">Aceptar</button>
+        <button id="cookie-decline" class="btn" style="padding: 8px 18px; font-size: 0.88rem; background: #334155; color: #fff;">Solo Técnicas</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/ads-config.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cargador de Coche Eléctrico en Casa: Guía de Instalación, Costes y Ahorro - EcoVatio</title>
+  <meta name="description" content="Guía completa para instalar un punto de recarga Wallbox en casa o garaje comunitario: normativa ITC-BT-52, balanceo dinámico de carga, potencia necesaria y coste por 100 km.">
+  <link rel="canonical" href="https://ecovatio-energia.com/articulos/cargador-coche-electrico-en-casa-instalacion-y-coste.html">
+  <link rel="stylesheet" href="../css/style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Instalar un Cargador de Coche Eléctrico en Casa: Costes, Potencia y Normativa",
+    "description": "Explicación técnica de la instalación de puntos de recarga domésticos (Modo 3 Wallbox), balanceo de carga para evitar aumentar la potencia contratada y análisis económico frente al combustible fósil.",
+    "author": {
+      "@type": "Organization",
+      "name": "Equipo Técnico EcoVatio"
+    },
+    "datePublished": "2026-03-24",
+    "dateModified": "2026-04-05"
+  }
+  </script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="../index.html" class="logo">
+        <div class="logo-icon">☀️</div>
+        Eco<span>Vatio</span>
+      </a>
+      <button class="menu-toggle" aria-label="Abrir menú">☰</button>
+      <nav class="main-nav">
+        <ul class="nav-links">
+          <li><a href="../index.html">Inicio</a></li>
+          <li><a href="../herramientas/index.html">Calculadoras</a></li>
+          <li><a href="guia-paneles-solares-autoconsumo-hogar.html">Energía Solar</a></li>
+          <li><a href="aerotermia-vs-gas-calderas-comparativa.html">Aerotermia</a></li>
+          <li><a href="como-entender-factura-de-la-luz-potencia-kwh.html">Factura</a></li>
+          <li><a href="../sobre-nosotros.html">Nosotros</a></li>
+          <li><a href="../contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="ad-slot-wrapper">
+      <span class="ad-label">Publicidad</span>
+      <div class="ad-box header-banner" data-ad-slot="header"></div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="main-layout">
+      
+      <main class="article-content">
+        <div class="breadcrumbs">
+          <a href="../index.html">Inicio</a> &gt; 
+          <a href="../herramientas/index.html">Movilidad Eléctrica</a> &gt; 
+          <span>Puntos de Recarga</span>
+        </div>
+
+        <header class="article-header">
+          <h1 class="article-title">Instalar un Cargador de Coche Eléctrico en Casa: Todo sobre el Wallbox, la Potencia y el Ahorro Real</h1>
+          <div class="article-meta">
+            <span>Por Redacción Técnica EcoVatio</span>
+            <span>•</span>
+            <time datetime="2026-03-24">24 de marzo de 2026</time>
+            <span>•</span>
+            <span>Lectura: 11 min</span>
+          </div>
+        </header>
+
+        <div class="table-of-contents">
+          <strong>Índice de la Guía:</strong>
+          <ul style="margin: 10px 0 0 20px;">
+            <li><a href="#modos-recarga">Modos de recarga: Por qué evitar el enchufe Schuko convencional</a></li>
+            <li><a href="#balanceo-carga">Balanceo Dinámico de Carga: La clave para no subir la potencia contratada</a></li>
+            <li><a href="#comunitario-vs-unifamiliar">Instalación en Garaje Comunitario vs Vivienda Unifamiliar</a></li>
+            <li><a href="#coste-100km">Comparativa de coste: 100 km en eléctrico vs gasolina y diésel</a></li>
+            <li><a href="#solar-ev">Carga solar inteligente: Cargar el coche con excedentes solares a 0 €</a></li>
+            <li><a href="#faq">Preguntas frecuentes</a></li>
+          </ul>
+        </div>
+
+        <article class="article-body">
+          <p>
+            Tener un vehículo eléctrico (VE) o híbrido enchufable (PHEV) solo despliega su verdadero potencial de ahorro y confort cuando se dispone de un punto de recarga propio en el lugar de estacionamiento habitual. Cargar en electrolineras públicas de alta potencia no solo desgasta más rápido la batería a largo plazo, sino que puede resultar entre 4 y 6 veces más costoso por kWh que la recarga doméstica nocturna.
+          </p>
+
+          <!-- Infografía SVG -->
+          <div class="article-infographic" style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:12px; padding:20px; margin:25px 0; text-align:center;">
+            <h4 style="margin-bottom:12px; color:#0f172a; font-size:1.05rem;">Funcionamiento del Balanceo Dinámico de Potencia</h4>
+            <svg viewBox="0 0 700 240" style="max-width:100%; height:auto;" xmlns="http://www.w3.org/2000/svg">
+              <!-- Cuadro General de la Casa -->
+              <rect x="30" y="60" width="160" height="110" rx="8" fill="#f1f5f9" stroke="#475569" stroke-width="2"/>
+              <text x="110" y="90" text-anchor="middle" font-weight="700" fill="#0f172a" font-size="13">Cuadro Eléctrico</text>
+              <text x="110" y="112" text-anchor="middle" fill="#2563eb" font-size="12">Potencia: 4.6 kW</text>
+              <text x="110" y="132" text-anchor="middle" fill="#64748b" font-size="11">Sensor Toroidal (Clamp)</text>
+
+              <!-- Flecha arriba: consumo hogar -->
+              <path d="M 190 90 L 270 90" stroke="#ef4444" stroke-width="2" marker-end="url(#arrow-red)"/>
+              <rect x="280" y="50" width="160" height="75" rx="8" fill="#fee2e2" stroke="#ef4444" stroke-width="1.5"/>
+              <text x="360" y="80" text-anchor="middle" font-weight="700" fill="#991b1b" font-size="12">Electrodomésticos</text>
+              <text x="360" y="100" text-anchor="middle" fill="#b91c1c" font-size="11">Consumo en uso: 2.2 kW</text>
+
+              <!-- Sensor ajusta Wallbox -->
+              <path d="M 190 140 L 270 140" stroke="#10b981" stroke-width="2" marker-end="url(#arrow-green)"/>
+              <rect x="280" y="135" width="160" height="85" rx="8" fill="#ecfdf5" stroke="#10b981" stroke-width="1.5"/>
+              <text x="360" y="165" text-anchor="middle" font-weight="700" fill="#065f46" font-size="13">Wallbox Inteligente</text>
+              <text x="360" y="185" text-anchor="middle" fill="#047857" font-size="11">Ajusta carga: 2.4 kW</text>
+              <text x="360" y="202" text-anchor="middle" fill="#059669" font-size="10">(4.6 kW - 2.2 kW = 2.4 kW)</text>
+
+              <!-- Flecha al Vehículo -->
+              <path d="M 440 175 L 500 175" stroke="#10b981" stroke-width="3"/>
+              <rect x="510" y="125" width="160" height="95" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+              <text x="590" y="155" text-anchor="middle" font-size="24">🚗⚡</text>
+              <text x="590" y="180" text-anchor="middle" font-weight="700" fill="#1e40af" font-size="12">Vehículo Eléctrico</text>
+              <text x="590" y="200" text-anchor="middle" fill="#1d4ed8" font-size="11">¡Cero Saltos de ICP!</text>
+
+              <defs>
+                <marker id="arrow-red" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-flow">
+                  <path d="M 0 0 L 10 5 L 0 10 z" fill="#ef4444"/>
+                </marker>
+                <marker id="arrow-green" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-flow">
+                  <path d="M 0 0 L 10 5 L 0 10 z" fill="#10b981"/>
+                </marker>
+              </defs>
+            </svg>
+            <p style="font-size:0.85rem; color:#64748b; margin-top:8px;">El balanceador modula la corriente del cargador en tiempo real según lo que consuma la vivienda.</p>
+          </div>
+
+          <h2 id="modos-recarga">1. Modos de Recarga: Por Qué el Enchufe Normal (Schuko) No es Suficiente</h2>
+          <p>
+            Cargar un automóvil con un cable de emergencia tipo «Schuko» doméstico (Modo 2) presenta severas limitaciones:
+          </p>
+          <ul>
+            <li><strong>Límite térmico y riesgo de incendio:</strong> Los enchufes convencionales no están diseñados para sostener 10-13 amperios continuos durante 8 o 12 horas ininterrumpidas. Los bornes sufren fatiga térmica.</li>
+            <li><strong>Velocidad excesivamente lenta:</strong> A 2,3 kW de potencia máxima, recargar una batería estándar de 60 kWh puede requerir casi 30 horas.</li>
+            <li><strong>Falta de comunicación inteligente:</strong> No permite comunicación bidireccional de control ni gestión de excedentes solares.</li>
+          </ul>
+          <p>
+            El estándar industrial recomendado es el <strong>Modo 3 con conector Tipo 2 (Mennekes)</strong> a través de una estación mural fija (Wallbox), con línea eléctrica exclusiva desde el cuadro protegida por interruptor magnetotérmico diferencial específico de Tipo A y dispositivo contra sobretensiones.
+          </p>
+
+          <div class="ad-slot-wrapper">
+            <span class="ad-label">Publicidad</span>
+            <div class="ad-box in-article-banner" data-ad-slot="inArticle"></div>
+          </div>
+
+          <h2 id="balanceo-carga">2. Balanceo Dinámico de Carga: La Solución Definitiva</h2>
+          <p>
+            El mayor temor de los usuarios es tener que contratar 7 o 9 kW de potencia con su distribuidora eléctrica, lo que dispararía el coste fijo de la factura en el término de potencia cada mes.
+          </p>
+          <p>
+            El <strong>balanceador dinámico de carga</strong> resuelve este problema mediante una pinza amperimétrica (transformador toroidal) instalada en la acometida principal de la vivienda. Si la casa tiene 4,6 kW contratados y de noche se encienden la calefacción y el lavavajillas consumiendo 2 kW, el cargador entrega los 2,6 kW restantes al vehículo. Si la casa no consume casi nada, el cargador entrega los 4,6 kW completos. <em>El interruptor de control de potencia (ICP) nunca salta.</em>
+          </p>
+
+          <h2 id="coste-100km">3. Análisis Económico: ¿Cuánto Cuesta Recorrer 100 km?</h2>
+          <p>
+            Para un conductor medio que recorre 15.000 km al año (consumo medio de 17 kWh/100 km para un eléctrico y 6,5 l/100 km para un térmico de gasolina):
+          </p>
+          <table style="width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.92rem;">
+            <thead>
+              <tr style="background: #f1f5f9; text-align: left;">
+                <th style="padding: 10px; border: 1px solid #cbd5e1;">Combustible / Fuente</th>
+                <th style="padding: 10px; border: 1px solid #cbd5e1;">Precio Estimado</th>
+                <th style="padding: 10px; border: 1px solid #cbd5e1;">Coste por 100 km</th>
+                <th style="padding: 10px; border: 1px solid #cbd5e1;">Coste Anual (15.000 km)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="padding: 10px; border: 1px solid #cbd5e1; font-weight:600;">Gasolina 95</td>
+                <td style="padding: 10px; border: 1px solid #cbd5e1;">1,62 € / litro</td>
+                <td style="padding: 10px; border: 1px solid #cbd5e1; color:#dc2626; font-weight:700;">10,53 €</td>
+                <td style="padding: 10px; border: 1px solid #cbd5e1;">1.579 €</td>
+              </tr>
+              <tr>
+                <td style="padding: 10px; border: 1px solid #cbd5e1; font-weight:600;">Diésel</td>
+                <td style="padding: 10px; border: 1px solid #cbd5e1;">1,50 € / litro</td>
+                <td style="padding: 10px; border: 1px solid #cbd5e1; color:#ea580c; font-weight:700;">8,25 €</td>
+                <td style="padding: 10px; border: 1px solid #cbd5e1;">1.237 €</td>
+              </tr>
+              <tr>
+                <td style="padding: 10px; border: 1px solid #cbd5e1; font-weight:600;">Eléctrico (Cargador público DC)</td>
+                <td style="padding: 10px; border: 1px solid #cbd5e1;">0,55 € / kWh</td>
+                <td style="padding: 10px; border: 1px solid #cbd5e1; color:#d97706; font-weight:700;">9,35 €</td>
+                <td style="padding: 10px; border: 1px solid #cbd5e1;">1.402 €</td>
+              </tr>
+              <tr style="background:#ecfdf5;">
+                <td style="padding: 10px; border: 1px solid #bbf7d0; font-weight:700;">Eléctrico en Casa (Tarifa Nocturna Valle)</td>
+                <td style="padding: 10px; border: 1px solid #bbf7d0;">0,08 € / kWh</td>
+                <td style="padding: 10px; border: 1px solid #bbf7d0; color:#059669; font-weight:800;">1,36 €</td>
+                <td style="padding: 10px; border: 1px solid #bbf7d0; color:#059669; font-weight:800;">204 €</td>
+              </tr>
+              <tr style="background:#f0fdf4;">
+                <td style="padding: 10px; border: 1px solid #bbf7d0; font-weight:700;">Eléctrico con Excedente Solar</td>
+                <td style="padding: 10px; border: 1px solid #bbf7d0;">0,00 € (Coste marginal)</td>
+                <td style="padding: 10px; border: 1px solid #bbf7d0; color:#047857; font-weight:800;">0,00 €</td>
+                <td style="padding: 10px; border: 1px solid #bbf7d0; color:#047857; font-weight:800;">0 €</td>
+              </tr>
+            </tbody>
+          </table>
+          <p>
+            El ahorro anual frente a un coche de combustión ronda entre <strong>1.000 € y 1.370 € cada año</strong>, lo que amortiza el punto de recarga completo (equipo e instalación por ~1.200 €) en menos de 12 meses.
+          </p>
+
+          <h2 id="comunitario-vs-unifamiliar">4. ¿Cómo Instalar en un Garaje Comunitario?</h2>
+          <p>
+            En la mayoría de legislaciones modernas (como el artículo 17.5 de la Ley de Propiedad Horizontal en España), <strong>no es necesaria la aprobación en junta de vecinos</strong> para instalar un punto de recarga en plaza individual. Únicamente se requiere informar previamente por escrito al presidente o administrador de la comunidad.
+          </p>
+          <p>
+            La derivación se conecta directamente al contador individual de la vivienda (si se encuentra en el mismo edificio) o a un contador secundario con tarifa específica para vehículos eléctricos.
+          </p>
+
+          <h2 id="faq">Preguntas Frecuentes</h2>
+          <div class="faq-accordion">
+            <details class="faq-item" style="border:1px solid #e2e8f0; border-radius:8px; padding:12px; margin-bottom:10px;">
+              <summary style="font-weight:700; cursor:pointer; color:#0f172a;">¿Cuánto tiempo tarda en cargarse un coche en casa?</summary>
+              <p style="margin-top:8px; color:#475569; font-size:0.92rem;">A una potencia monofásica de 7,4 kW, una batería de 60 kWh se carga de 10% a 80% en aproximadamente 5,5 horas (perfectamente durante la noche). En el uso diario, la mayoría de conductores recorre 40-50 km, lo que solo requiere recargar unas 2 horas al día.</p>
+            </details>
+            <details class="faq-item" style="border:1px solid #e2e8f0; border-radius:8px; padding:12px; margin-bottom:10px;">
+              <summary style="font-weight:700; cursor:pointer; color:#0f172a;">¿Qué potencia mínima necesito tener contratada?</summary>
+              <p style="margin-top:8px; color:#475569; font-size:0.92rem;">Con un cargador equipado con sensor de balanceo dinámico, puedes recargar con la potencia habitual de 3,45 kW o 4,6 kW sin problemas, aprovechando las horas de madrugada cuando la casa no tiene aparatos encendidos.</p>
+            </details>
+          </div>
+
+        </article>
+
+        <!-- Caja de Autor -->
+        <div class="author-box" style="display:flex; gap:16px; align-items:center; background:#f8fafc; border:1px solid #e2e8f0; border-radius:10px; padding:18px; margin-top:30px;">
+          <div style="font-size:2.4rem;">🔌</div>
+          <div>
+            <h4 style="margin-bottom:4px; font-size:1rem; color:#0f172a;">Redacción de Movilidad Eléctrica EcoVatio</h4>
+            <p style="font-size:0.88rem; color:#64748b; line-height:1.4;">Ingenieros eléctricos dedicados al análisis de infraestructura de recarga, eficiencia energética y transición hacia el transporte cero emisiones.</p>
+          </div>
+        </div>
+
+      </main>
+
+      <!-- Barra Lateral -->
+      <aside class="sidebar">
+        <div class="ad-slot-wrapper" style="margin-top: 0;">
+          <span class="ad-label">Publicidad</span>
+          <div class="ad-box sidebar-banner" data-ad-slot="sidebar"></div>
+        </div>
+
+        <div class="widget">
+          <h3 class="widget-title">Artículos Relacionados</h3>
+          <ul class="widget-list">
+            <li><a href="guia-paneles-solares-autoconsumo-hogar.html">☀️ Paneles Solares y Autoconsumo</a></li>
+            <li><a href="baterias-solares-litio-almacenamiento-merecen-la-pena.html">🔋 Baterías Solares LiFePO4</a></li>
+            <li><a href="como-entender-factura-de-la-luz-potencia-kwh.html">⚡ Reducir Potencia y Horarios Valle</a></li>
+            <li><a href="aerotermia-vs-gas-calderas-comparativa.html">🔥 Climatización Eficiente con Aerotermia</a></li>
+          </ul>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="ad-slot-wrapper">
+      <span class="ad-label">Publicidad</span>
+      <div class="ad-box footer-banner" data-ad-slot="footer"></div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>☀️ EcoVatio</h3>
+          <p>Portal divulgativo de energía solar fotovoltaica, descarbonización doméstica y eficiencia energética para hogares.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Herramientas</h4>
+          <ul>
+            <li><a href="../index.html#calculadora-solar">Calculadora Solar</a></li>
+            <li><a href="../herramientas/index.html#herramienta-electrodomesticos">Coste Electrodomésticos</a></li>
+            <li><a href="como-entender-factura-de-la-luz-potencia-kwh.html">Optimizar Factura</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal & Transparencia</h4>
+          <ul>
+            <li><a href="../politica-de-privacidad.html">Privacidad</a></li>
+            <li><a href="../terminos-y-condiciones.html">Términos de Uso</a></li>
+            <li><a href="../politica-de-cookies.html">Cookies</a></li>
+            <li><a href="../sobre-nosotros.html">Quiénes Somos</a></li>
+            <li><a href="../contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contacto</h4>
+          <p style="color: #ffffff; font-weight: 600;">contacto@ecovatio-energia.com</p>
+          <p style="font-size: 0.85rem; color: #a7f3d0; margin-top: 8px;">Monetizado éticamente mediante Google AdSense.</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 EcoVatio. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/ads-config.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>
