@@ -7,13 +7,13 @@
  *    - Asigna `enabled: true`
  *    - Introduce tu Publisher ID en `client` (ejemplo: 'ca-pub-XXXXXXXXXXXXXXX')
  *    - Asigna los IDs de los bloques creados en Google AdSense
- * 2. Si `enabled: false`, el sitio web muestra elegantes bloques de diseño
+ * 2. Si `enabled: true`, el sitio web muestra elegantes bloques de diseño
  *    rotulados con 'PUBLICIDAD', cumpliendo las directrices de aprobación de Google.
  */
 
 const ADS_CONFIG = {
-  client: "ca-pub-XXXXXXXXXXXXXXXX",
-  enabled: false,
+  client: "ca-pub-7959072629123030",
+  enabled: true,
   slots: {
     header: "2000000001",
     inArticle: "2000000002",
